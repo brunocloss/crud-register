@@ -1,22 +1,18 @@
 <?php
-session_start();
-require_once __DIR__ . '/../controller/userCtrl.php';
-// if (isset($_SESSION['edit_user_data'])) {
-//     $editUserData = $_SESSION['edit_user_data'];
 
+require_once __DIR__ . '/../controller/userCtrl.php';
+
+session_start();
 $editUserData = [];
 
-if (isset($_GET['edit_id'])) {
+if(isset($_GET['edit_id']))
+{
     $edit_id = $_GET['edit_id'];
     $userCtrl = new UserCtrl("name", "email", "telephone", "pwd", "pwdConfirm");
     $editUserData = $userCtrl->getUser($edit_id);
 
-    
     $_SESSION['editUserData'] = $editUserData;
-
 }
-
-
 
 ?>
 

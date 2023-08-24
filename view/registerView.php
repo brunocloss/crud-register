@@ -60,11 +60,12 @@ require_once "../controller/userCtrl.php";
                     </form>
 
                     <div class="container mt-2">
+
                         <?php
                         $user = new UserCtrl("name", "email", "telephone", "pwd", "pwdConfirm");
                         $user->errorDisplay();
                         ?>
-                        <div id="errorMessages" class="text-danger"></div>
+
                     </div>
 
                 </div>
