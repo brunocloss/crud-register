@@ -32,6 +32,7 @@ require_once "../controller/userCtrl.php";
                     <input type="email" class="form-control" placeholder="E-mail" name="email">
                 </div>
             </div>
+            
             <div class="mb-3 mt-3">
                 <div class="input-group mb-3">
                     <span class="input-group-text">🕿</span>
