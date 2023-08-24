@@ -34,4 +34,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Failed (register.php): " . $e->getMessage();
     }
 }
-
+else
+{
+    header("Location ../view/index.php");
+    die();
+}
