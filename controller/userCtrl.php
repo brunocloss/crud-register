@@ -128,7 +128,6 @@ class UserCtrl extends UserModel
         }
     }
 
-
     ////////////////////////////////////////////////////////////////////////////
     //taking methods from Model and implement them on methods inside Controller:
 
@@ -156,4 +155,5 @@ class UserCtrl extends UserModel
     {
         $this->querySetUser($username, $email, $telephone, $pwd);
     }
+    
 }

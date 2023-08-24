@@ -28,8 +28,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $registerValidation->registerUser($name, $email, $telephone, $pwd);
 
         header("Location: ../view/index.php?register=success");
-
-
     }
     catch(PDOException $e)
     {

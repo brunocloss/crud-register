@@ -7,6 +7,7 @@ class UserModel extends Database
 
     ////////////////////////////////////////////
     //functions that interact with the database:
+    
     protected function queryDisplayUsers()
     {
         $sql = "SELECT * FROM users ORDER BY id";
