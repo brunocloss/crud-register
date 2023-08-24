@@ -24,28 +24,36 @@ class UserCtrl extends UserModel
 
     private function emptyInput()
     {
-        if (empty($this->name) || empty($this->email) || empty($this->telephone) || empty($this->pwd) || empty($this->pwdConfirm)) {
+        if(empty($this->name) || empty($this->email) || empty($this->telephone) || empty($this->pwd) || empty($this->pwdConfirm))
+        {
             return true;
-        } else {
+        } 
+        else
+        {
             return false;
         }
     }
 
     private function emailValidation()
     {
-        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)  || $this->queryGetEmail($this->email)) {
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)  || $this->queryGetEmail($this->email))
+        {
             return true;
-        } else {
+        } 
+        else 
+        {
             return false;
         }
     }
 
     private function pwdValidation()
     {
-
-        if ($this->pwd !== $this->pwdConfirm) {
+        if($this->pwd !== $this->pwdConfirm)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
@@ -57,13 +65,16 @@ class UserCtrl extends UserModel
     {
         $errors = [];
 
-        if ($this->emptyInput()) {
+        if($this->emptyInput())
+        {
             $errors['empty_error'] = "Fill all fields";
         }
-        if ($this->emailValidation()) {
+        if($this->emailValidation())
+        {
             $errors['email_error'] = "Invalid email or already taken";
         }
-        if ($this->pwdValidation()) {
+        if($this->pwdValidation())
+        {
             $errors['password_error'] = "The passwords are different";
         }
 
@@ -74,10 +85,12 @@ class UserCtrl extends UserModel
     {
         $errors = [];
 
-        if ($this->emptyInput()) {
+        if($this->emptyInput())
+        {
             $errors['empty_error'] = "Fill all fields";
         }
-        if ($this->pwdValidation()) {
+        if($this->pwdValidation())
+        {
             $errors['password_error'] = "The passwords are different";
         }
 
@@ -86,22 +99,30 @@ class UserCtrl extends UserModel
 
     public function errorDisplay()
     {
-        if (isset($_SESSION['register_error'])) {
+        if(isset($_SESSION['register_error']))
+        {
             $errors = $_SESSION['register_error'];
-            echo '<br>';
 
-            foreach ($errors as $error) {
+            echo '<br>';
+            foreach ($errors as $error)
+            {
                 echo '<p style="color:red">' . $error . '</p>';
             }
 
             unset($_SESSION['register_error']);
-        } else if (isset($_GET['register']) && $_GET['register'] === "success") {
+        }
+        else if(isset($_GET['register']) && $_GET['register'] === "success")
+        {
             echo '<br>';
             echo '<p style="color:green;">Register success</p>';
-        } else if (isset($_GET['edit']) && $_GET['edit'] === "success") {
+        }
+        else if(isset($_GET['edit']) && $_GET['edit'] === "success")
+        {
             echo '<br>';
             echo '<p style="color:green;">Edit success</p>';
-        } else if (isset($_GET['delete']) && $_GET['delete'] === "success") {
+        }
+        else if(isset($_GET['delete']) && $_GET['delete'] === "success")
+        {
             echo '<br>';
             echo '<p style="color:green;">Delete success</p>';
         }

@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         session_start();
 
-
         if (!empty($errors)) {
             $_SESSION['register_error'] = $errors;
             header('Location: ../view/registerView.php');

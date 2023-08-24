@@ -14,19 +14,6 @@ if (isset($_GET['edit_id'])) {
     
     $_SESSION['editUserData'] = $editUserData;
 
-    print_r($editUserData);
-
-
-
-    // }
-
-    // echo $editUserData['name'];
-
-    // $a = $editUserData['name'];
-    // $b = $editUserData['email'];
-    // $c = $editUserData['telephone'];
-    // $d = $editUserData['pwd'];
-
 }
 
 

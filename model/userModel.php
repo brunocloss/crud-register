@@ -5,6 +5,9 @@ require_once "database/database.php";
 class UserModel extends Database
 {
 
+    ////////////////////////////////////////////
+    //functions that interact with the database:
+
     protected function queryDisplayUsers()
     {
         $sql = "SELECT * FROM users ORDER BY id";
@@ -17,7 +20,8 @@ class UserModel extends Database
             echo "<tr>";
             foreach ($row as $key => $value)
              {
-                if ($key !== "id") {
+                if ($key !== "id")
+                {
                     echo "<td>".$value."</td>";
                 }
             }
@@ -42,7 +46,6 @@ class UserModel extends Database
         $stmt->bindParam(":t", $telephone);
         $stmt->bindParam(":p", $pwd);
         $stmt->execute();
-        return true;
     }
 
     protected function queryGetEmail($email)
