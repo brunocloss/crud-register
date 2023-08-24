@@ -7,7 +7,6 @@ class UserModel extends Database
 
     ////////////////////////////////////////////
     //functions that interact with the database:
-
     protected function queryDisplayUsers()
     {
         $sql = "SELECT * FROM users ORDER BY id";
@@ -18,6 +17,7 @@ class UserModel extends Database
         foreach ($res as $row) 
         {
             echo "<tr>";
+            
             foreach ($row as $key => $value)
              {
                 if ($key !== "id")
@@ -31,8 +31,8 @@ class UserModel extends Database
                 <a href="../view/editView.php?edit_id=<?= $row['id']?>" style="color: white; text-decoration:none">🔄EDIT</a>    
                 <a href="../controller/deleteCtrl.php?delete_id=<?= $row['id']?>" style="color: white; text-decoration:none">❌DELETE</a>
             </td>
+            
             <?php
-
             echo "</tr>";
         }
     }
