@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../controller/userCtrl.php';
 
-
 $deleter = new UserCtrl($name, $email, $telephone, $pwd, $pwdConfirm);
 
 if(isset($_GET['delete_id']))

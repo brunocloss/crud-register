@@ -27,10 +27,10 @@ class UserModel extends Database
             }
 
             ?>
-                <td>
-                    <a href="../view/editView.php?edit_id=<?= $row['id']?>" style="color: white; text-decoration:none">🔄EDIT</a>    
-                    <a href="../controller/deleteCtrl.php?delete_id=<?= $row['id']?>" style="color: white; text-decoration:none">❌DELETE</a>
-                </td>
+            <td>
+                <a href="../view/editView.php?edit_id=<?= $row['id']?>" style="color: white; text-decoration:none">🔄EDIT</a>    
+                <a href="../controller/deleteCtrl.php?delete_id=<?= $row['id']?>" style="color: white; text-decoration:none">❌DELETE</a>
+            </td>
             <?php
 
             echo "</tr>";

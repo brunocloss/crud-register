@@ -34,22 +34,20 @@ require_once "../controller/userCtrl.php";
             <tbody>
 
                 <?php
-
                 $user = new UserCtrl("name", "email", "telephone", "pwd", "pwdConfirm");
                 $user->displayUsers();
-
-
                 ?>
 
             </tbody>
         </table>
         <div class="text-center">
+
             <?php
             $user->errorDisplay();
             ?>
+
         </div>
     </div>
-
 
 </body>
 
