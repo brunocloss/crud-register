@@ -5,7 +5,7 @@ class Database
     private $host = "localhost";
     private $dbName = "projeto";
     private $username = "root";
-    private $pwd = "!Feliz2013,";
+    private $pwd = "";
 
     protected function dbConnect()
     {
